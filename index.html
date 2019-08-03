@@ -11,7 +11,7 @@
     <script type="text/javascript">
     //Função principal para inicar a contagem
       function Iniciar(){
-        var qtd =document.getElementById("qtd").value;
+        var qtd = document.getElementById("qtd").value;
         // Função para Calcular se o número é múltiplo
         // usando o módulo de divisão
         function Calcular(valor, multiplo){
@@ -30,18 +30,18 @@
           // Contador de acordo com os parametros que usuario determina
           for(var i=1;i<=qtd;i++){
             if(Calcular(i,3))
-              multiplos_3.push(i);
+              multiplos_3.push(" Jovens");
 
             if(Calcular(i,5))
-              multiplos_5.push(i);
+              multiplos_5.push(" Gênios");
 
             if(Calcular(i,5) && Calcular(i,3))
-                multiplos.push(i);
+                multiplos.push(" Jovens Gênios");
           }
 
           document.write("Os múltiplos de 3 são: ",multiplos_3);
           document.write("<br>Os múltiplos de 5 são: ",multiplos_5);
-          document.write("<br>Os múltiplos de ambos são ",multiplos);
+          document.write("<br>Os múltiplos de ambos são: ",multiplos);
         }
     </script>
   </body>
