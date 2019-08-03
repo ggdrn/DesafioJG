@@ -1,0 +1,45 @@
+<html>
+  <head></head>
+  <body>
+    <div>
+      <p>
+    </div>
+    <script type="text/javascript">
+
+      // Função para calcular se o número é múltiplo
+      // usando o módulo de divisão
+
+      var valor;
+      var multiplo;
+      function calcular(valor, multiple){
+        resto = valor % multiplo;
+        if(resto==0)
+          return true;
+        else
+          return false;
+        }
+
+        // Arrays contendo os múltiplos valores de 3,5 e ambos
+        var multiplos = [];
+        var multiplos_3 = [];
+        var multiplos_5 = [];
+
+        // Contador de acordo com os parametros que usuario determina
+        for(var i=1;i<=100;i++){
+          if(multiple(i,3))
+            multiples_3.push(i);
+
+          if(multiple(i,5))
+            multiples_5.push(i);
+
+        }
+        document.write("Os múltiplos de 3 são: ",multiplos_3);
+        document.write("<br>Os múltiplos de 5 são: ",multiplos_5);
+        document.write("<br>Os múltiplos de ambos são ",multiplos);
+    </script>
+    <form>
+      <input type="text" id="qtd" name="number"/><br/>
+      <input type="button" value="Contar!" onclick="getcube()"/>
+    </form>
+  </body>
+</html>
