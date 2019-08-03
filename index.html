@@ -1,45 +1,48 @@
 <html>
-  <head></head>
+  <head>   <title>DESAFIO JG</title> </head>
   <body>
     <div>
-      <p>
+      <form>
+        <p>Escolha um valor maximo para dividir</p>
+        <input type="text" id="qtd" name="numero"/><br/>
+        <input type="button" value="Contar!" onclick="Iniciar()"/>
+      </form>
     </div>
     <script type="text/javascript">
+    //Função principal para inicar a contagem
+      function Iniciar(){
+        var qtd =document.getElementById("qtd").value;
+        // Função para Calcular se o número é múltiplo
+        // usando o módulo de divisão
+        function Calcular(valor, multiplo){
+          resto = valor % multiplo;
+          if(resto==0)
+            return true;
+          else
+            return false;
+          }
 
-      // Função para calcular se o número é múltiplo
-      // usando o módulo de divisão
+          // Arrays contendo os múltiplos valores de 3,5 e ambos
+          var multiplos = [];
+          var multiplos_3 = [];
+          var multiplos_5 = [];
 
-      var valor;
-      var multiplo;
-      function calcular(valor, multiple){
-        resto = valor % multiplo;
-        if(resto==0)
-          return true;
-        else
-          return false;
+          // Contador de acordo com os parametros que usuario determina
+          for(var i=1;i<=qtd;i++){
+            if(Calcular(i,3))
+              multiplos_3.push(i);
+
+            if(Calcular(i,5))
+              multiplos_5.push(i);
+
+            if(Calcular(i,5) && Calcular(i,3))
+                multiplos.push(i);
+          }
+
+          document.write("Os múltiplos de 3 são: ",multiplos_3);
+          document.write("<br>Os múltiplos de 5 são: ",multiplos_5);
+          document.write("<br>Os múltiplos de ambos são ",multiplos);
         }
-
-        // Arrays contendo os múltiplos valores de 3,5 e ambos
-        var multiplos = [];
-        var multiplos_3 = [];
-        var multiplos_5 = [];
-
-        // Contador de acordo com os parametros que usuario determina
-        for(var i=1;i<=100;i++){
-          if(multiple(i,3))
-            multiples_3.push(i);
-
-          if(multiple(i,5))
-            multiples_5.push(i);
-
-        }
-        document.write("Os múltiplos de 3 são: ",multiplos_3);
-        document.write("<br>Os múltiplos de 5 são: ",multiplos_5);
-        document.write("<br>Os múltiplos de ambos são ",multiplos);
     </script>
-    <form>
-      <input type="text" id="qtd" name="number"/><br/>
-      <input type="button" value="Contar!" onclick="getcube()"/>
-    </form>
   </body>
 </html>
