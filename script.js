@@ -11,22 +11,23 @@
         return false;
       }
       // Array contendo os múltiplos valores de 3,5 e ambos
-    let resultado = [];
+    let array = [];
       // Contador de acordo com os parametros que usuario determina
     for(let i=1;i<=qtd;i++){
       if(Calcular(i,5) && Calcular(i,3)){
-        resultado.push(" Jovens Gênios ");
+        array.push(" Jovens Gênios ");
         }else{
           if(Calcular(i,3)){
-            resultado.push(" Jovens ");
+            array.push(" Jovens ");
           }
           else if(Calcular(i,5)){
-            resultado.push(" Gênios ");
+            array.push(" Gênios ");
           }else {
-            resultado.push(i);
+            array.push(i);
           }
         }
       }
-    // Passar o resultado para o index
+    // Passar o array para o index
+    let resultado = "<p class='alert alert-primary' role='alert'><b>Vamos Contar:</b> " + array + "</p> ";
     document.getElementById('resultado').innerHTML = resultado;
   }
