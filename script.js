@@ -10,22 +10,23 @@
       else
         return false;
       }
-      // Arrays contendo os múltiplos valores de 3,5 e ambos
-      let multiplos = [];
-      let multiplos_3 = [];
-      let multiplos_5 = [];
+      // Array contendo os múltiplos valores de 3,5 e ambos
+      let resultado = [];
       // Contador de acordo com os parametros que usuario determina
       for(let i=1;i<=qtd;i++){
-        if(Calcular(i,3))
-          multiplos_3.push(" Jovens ");
-
-        if(Calcular(i,5))
-          multiplos_5.push(" Gênios ");
-
-        if(Calcular(i,5) && Calcular(i,3))
-            multiplos.push(" Jovens Gênios ");
+        if(Calcular(i,5) && Calcular(i,3)){
+            resultado.push(" Jovens Gênios ");
+          }else{
+            if(Calcular(i,3)){
+              resultado.push(" Jovens ");
+            }
+            if(Calcular(i,5)){
+              resultado.push(" Gênios ");
+            }else {
+              resultado.push(i);
+            }
       }
-      // Juntar o resultado em uma variável só
-      let resultado = "<b>Os múltiplos de 3 são: </b>" + multiplos_3 + "<br><b>Os múltiplos de 5 são:  </b>" + multiplos_5 + "<br><b>Os múltiplos de ambos são: </b>" + multiplos;
+    }
+      // Passar o resultado para o index
       document.getElementById('resultado').innerHTML = resultado;
     }
