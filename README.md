@@ -6,5 +6,3 @@ input.
 
 2. A interface de usuário pode ser em linha de comando ou
 página web.
-
-### Disponível no [github](https://github.com/ggdrn/DesafioJG)
