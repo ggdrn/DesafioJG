@@ -4,5 +4,4 @@ Consiste em escrever um programa que imprima todos os números de 0 a X, porém,
 1. O usuário deve ser capaz de passar o valor de X como
 input.
 
-2. A interface de usuário pode ser em linha de comando ou
-página web.
+2. A interface de usuário pode ser em linha de comando ou página web.
