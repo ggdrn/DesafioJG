@@ -20,7 +20,7 @@
             if(Calcular(i,3)){
               resultado.push(" Jovens ");
             }
-            if(Calcular(i,5)){
+            else if(Calcular(i,5)){
               resultado.push(" Gênios ");
             }else {
               resultado.push(i);
